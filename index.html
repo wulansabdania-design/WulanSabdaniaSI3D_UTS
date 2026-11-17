@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Dashboard - Project UTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- HEADER -->
+        <header>
+            <h1>Royal Dashboard</h1>
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Cari Kelas, Dokumen, Aktifitas dll...">
+            </form>
+        </header>
+
+        <!-- SIDEBAR NAVIGASI -->
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-menu="home">Home</a></li>
+                <li><a href="#" data-menu="mahasiswa" data-highlight="card-main">Mahasiswa</a></li>
+                <li><a href="#" data-menu="kelas" data-highlight="card-section1">Kelas</a></li>
+                <li><a href="#" data-menu="aktifitas" data-highlight="card-section2">Aktifitas</a></li>
+                <li><a href="#" data-menu="statistik" data-highlight="card-aside">Statistik</a></li>
+                <li><a href="#" data-menu="dokumen" data-highlight="card-footer">Dokumen</a></li>
+                <li><a href="#" data-menu="settings">Settings</a></li>
+                <li><a href="#" data-menu="sign-out" class="sign-out">Sign Out</a></li>
+            </ul>
+        </nav>
+
+        <!-- BANNER UTAMA (MAIN) -->
+        <main id="card-main" class="dashboard-card">
+            <div class="welcome-text">
+                <h2 id="banner-title">Selamat Datang, WULAN SABDANIA<br>Kelas SI-3D</h2>
+                <p id="banner-desc">Kamu memiliki Statistik, 3 Progres Kelas, 4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen yang ada pada aplikasi ini.</p>
+            </div>
+            <div class="profile-pic">
+                <!-- Foto profil menggunakan tag <img> -->
+                <img src="gambar/foto-WulanSabdania.jpeg" alt="Foto Profil Mahasiswa">
+            </div>
+        </main>
+
+        <!-- BAGIAN STATISTIK (ASIDE) -->
+        <aside id="card-aside" class="dashboard-card">
+            <div class="chart-container">
+                <!-- Grafik statistik menggunakan tag <img> -->
+                <img src="gambar/Chart_Statistik.svg" alt="Grafik Statistik Mahasiswa">
+            </div>
+        </aside>
+
+        <!-- PROGRES KELAS (SECTION 1) -->
+        <section id="card-section1" class="progres-kelas dashboard-card">
+            <h3>Progres Kelas</h3>
+            <div class="card-list">
+                <div class="info-card">
+                    <h4>Matakuliah A</h4>
+                    <span>78 Pendaftar</span>
+                </div>
+                <div class="info-card">
+                    <h4>Matakuliah B</h4>
+                    <span>30 Pendaftar</span>
+                </div>
+                <div class="info-card">
+                    <h4>Matakuliah C</h4>
+                    <span>40 Pendaftar</span>
+                </div>
+                <div class="info-card">
+                    <h4>Matakuliah D</h4>
+                    <span>10 Pendaftar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AKTIFITAS SELANJUTNYA (SECTION 2) -->
+        <section id="card-section2" class="aktifitas dashboard-card">
+            <h3>Aktifitas Selanjutnya</h3>
+            <div class="card-list">
+                <div class="info-card">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <span class="date">Senin, 15 Januari 2025</span>
+                </div>
+                <div class="info-card">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <span class="date">Selasa, 15 Februari 2025</span>
+                </div>
+                <div class="info-card">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <span class="date">Rabu, 15 Maret 2025</span>
+                </div>
+                <div class="info-card">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <span class="date">Kamis, 15 April 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAMPIRAN (FOOTER) -->
+        <footer id="card-footer" class="dashboard-card">
+            <h3>Lampiran</h3>
+            <div class="attachment-list">
+                <div class="attachment-item">
+                    <p><strong>Lampiran Dokumen 1</strong> - Matakuliah A | Tugas Bersama Perkuliahan Daring</p>
+                    <span class="divider">|</span>
+                    <a href="#">Lihat Dokumen</a>
+                </div>
+                <div class="attachment-item">
+                    <p><strong>Lampiran Dokumen 2</strong> - Matakuliah B | Tugas Bersama Perkuliahan Daring</p>
+                    <span class="divider">|</span>
+                    <a href="#">Lihat Dokumen</a>
+                </div>
+                <div class="attachment-item">
+                    <p><strong>Lampiran Dokumen 3</strong> - Matakuliah C | Tugas Bersama Perkuliahan Daring</p>
+                    <span class="divider">|</span>
+                    <a href="#">Lihat Dokumen</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #d9dbdf;
+    color: #1e293b;
+    padding: 20px;
+}
+
+/* GRID UTAMA SESUAI WIREFRAME */
+.dashboard-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px 1.35fr 0.85fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "header header  header   header"
+        "nav    main    main     main"
+        "nav    aside   section1 section2"
+        "nav    footer  footer   footer";
+    gap: 20px;
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b245b;
+}
+
+.search-form input {
+    width: 300px;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-form input:focus {
+    border-color: #044bb1;
+}
+
+/* SIDEBAR NAVIGASI */
+nav {
+    grid-area: nav;
+    background-color: #044bb1;
+    border-radius: 8px;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 35px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+nav ul li a.active {
+    background: linear-gradient(135deg, #3299d4 0%, #2697d8 100%);
+    color: #e3e7ee; 
+    font-weight: 700;
+    border-left: 6px solid #ffffff; 
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+nav ul li a:focus,
+nav ul li a:active {
+    outline: none;
+    box-shadow: none;
+}
+
+nav ul li a.active:focus {
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.35);
+}
+
+nav ul li a.sign-out {
+    color: #f59e0b;
+    margin-top: 10px;
+}
+
+nav ul li a.sign-out:hover {
+    background-color: rgba(245,158, 11, 0.2);
+}
+
+/* BANNER WELCOME (MAIN) */
+main {
+    grid-area: main;
+    background-color: #044bb1;
+    border-radius: 8px;
+    padding: 28px 36px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.welcome-text p {
+    font-size: 13px;
+    color: #e2e8f0;
+    max-width: 520px;
+    line-height: 1.5;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    background-color: #6366f1;
+}
+
+/* CARD TENGAH & BAWAH */
+aside, section, footer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+/* EFEK SHADOW PUTIH TERANG DI SEKELILING KARTU KETIKA MENU DIKLIK */
+.card-shadow-effect {
+    box-shadow: 0 0 25px 6px rgba(133, 177, 228, 0.95), 0 4px 20px rgba(4, 75, 177, 0.25) !important;
+    transform: translateY(-3px);
+}
+
+aside h3, section h3, footer h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+/* STATISTIK MAHASISWA (ASIDE) */
+aside {
+    background-color: #f7fafd;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-container img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+/* PROGRES KELAS & AKTIFITAS */
+.progres-kelas {
+    grid-area: section1;
+    background-color: #f8fbff;
+}
+
+.aktifitas {
+    grid-area: section2;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #babbbe;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.info-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.info-card span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.info-card span.date {
+    color: #044bb1;
+    font-weight: 600;
+}
+
+/* LAMPIRAN (FOOTER) */
+footer {
+    grid-area: footer;
+}
+
+.attachment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.attachment-item {
+    background-color: #f4f7fc;
+    padding: 14px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+}
+
+.attachment-item p {
+    color: #334155;
+}
+
+.attachment-item .divider {
+    color: #94a3b8;
+}
+
+.attachment-item a {
+    color: #044bb1;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "section1"
+            "section2"
+            "footer";
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+}
